@@ -1,0 +1,32 @@
+version: "3.1"
+
+services:
+  pingdirectory:
+    image: pingidentity/pingdirectory:8.2.0.0-edge
+    environment:
+      - SERVER_PROFILE_PATH=server_profiles/pingdirectory
+      #- SERVER_PROFILE_BRANCH=2001
+      - MAKELDIF_USERS=10
+      #- VERBOSE=true
+      - MAX_HEAP_SIZE=768m
+    env_file:
+      - ~/.pingidentity/devops
+      - settings.env
+    ports:
+      - 1636:636
+      - 1443:443
+      - 389:389
+    networks:
+      - pingnet-internal
+
+#  pingdataconsole:
+#    image: pingidentity/pingdataconsole:edge
+#    ports:
+#      - "9443:8443"
+#    networks:
+#      - pingnet-internal
+#      - pingnet-dmz
+
+networks:
+    pingnet-internal:
+    pingnet-dmz:
