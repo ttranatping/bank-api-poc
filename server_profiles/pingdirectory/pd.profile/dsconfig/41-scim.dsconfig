@@ -1,3 +1,6 @@
+dsconfig create-access-token-validator --validator-name MockATV --type mock --set enabled:true --set "identity-mapper:Exact Match"
+dsconfig set-root-dn-user-prop --user-name "SCIM2 Servlet" --set inherit-default-root-privileges:true
+
 dsconfig create-scim-schema \
  --schema-name urn:pingidentity:user
 
@@ -5,7 +8,7 @@ dsconfig create-scim-resource-type \
  --type-name User \
  --type ldap-mapping \
  --set enabled:true \
- --set endpoint:user \
+ --set endpoint:users \
  --set structural-ldap-objectclass:inetOrgPerson \
  --set include-base-dn:ou=people,${USER_BASE_DN} \
  --set core-schema:urn:pingidentity:user
