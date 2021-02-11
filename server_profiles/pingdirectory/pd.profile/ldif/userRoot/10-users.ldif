@@ -1,0 +1,237 @@
+dn: uid=alice,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Brooke
+cn: Alice Brooke
+givenName: Alice
+uid: alice
+employeeType: Accounting Clerk
+l: Head Office
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=alice
+entryuuid: 4b4a457a-1a7e-380a-a2fc-1412ae425ba9
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=bob,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Seawell
+cn: Bob Seawell
+givenName: Bob
+uid: bob
+employeeType: Manager
+l: Head Office
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=bob
+entryuuid: fe09e290-635d-310c-a94c-f13231592bca
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=eve,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Tancordo
+cn: Eve Tancordo
+givenName: Eve
+uid: eve
+employeeType: Security Officer
+l: Head Office
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=eve
+entryuuid: b9e9967b-8f79-36d9-ac58-a68e7f0a9e70
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=fred,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Knio
+cn: Fred Knio
+givenName: Fred
+uid: fred
+employeeType: Director
+l: Head Office
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-ideontity:user-id=fred
+entryuuid: fbca9ee0-5132-3e3b-933c-990ff04faf59
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=greg,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Psutka
+cn: Greg Psutka
+givenName: Greg
+uid: greg
+employeeType: Employee
+l: Store 1
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=greg
+entryuuid: 593bc98c-75b9-3b19-8db9-9302c5aa435c
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=henry,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Brooke
+cn: Harry Brooke
+givenName: Harry
+uid: henry
+employeeType: Security Officer
+l: Head Office
+o: acme
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=henry
+entryuuid: 7b4a457a-1a7e-380a-a2fc-1412ae425ba9
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=ian,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Seawell
+cn: Ian Seawell
+givenName: Ian
+uid: ian
+employeeType: Manager
+l: Acme Retail Store
+o: acme
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=ian
+entryuuid: 2e09e290-635d-310c-a94c-f13231592bca
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=jane,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Tancordo
+cn: Jane Tancordo
+givenName: Jane
+uid: jane
+employeeType: Security Officer
+l: Head Office
+o: mega
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=jane
+entryuuid: c9e9967b-8f79-36d9-ac58-a68e7f0a9e70
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=john,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Knio
+cn: John Knio
+givenName: John
+uid: john
+employeeType: Employee
+l: Store 2
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-ideontity:user-id=john
+entryuuid: abca9ee0-5132-3e3b-933c-990ff04faf59
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=kevin,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Psutka
+cn: Kevin Psutka
+givenName: Kevin
+uid: kevin
+employeeType: Manager
+l: Mega Retail Store
+o: mega
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=kevin
+entryuuid: 893bc98c-75b9-3b19-8db9-9302c5aa435c
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=larry,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: Psutka
+cn: Larry Psutka
+givenName: Larry
+uid: larry
+employeeType: Employee
+l: Mega Retail Store
+o: mega
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=larry
+entryuuid: 193bc98c-75b9-3b19-8db9-9302c5aa435c
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=administrator,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: PingFederate
+cn: Administrator
+givenName: PingFederate
+uid: administrator
+userPassword: 2FederateM0re
+pf-connected-identity: auth-source=pf-local-identity:user-id=administrator
+
+dn: uid=access2federate,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: PingAccess
+cn: pingFederateAdministrator
+givenName: PingAccess
+uid: access2federate
+userPassword: 2FederateM0re
+pf-connected-identity: auth-source=pf-local-identity:user-id=access2federate
+
+
+dn: uid=auditor,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+sn: PingFederate
+cn: Auditor
+givenName: PingFederate
+uid: auditor
+userPassword: 2FederateM0re
+pf-connected-identity: auth-source=pf-local-identity:user-id=auditor
