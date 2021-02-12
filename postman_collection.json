@@ -682,7 +682,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Single User",
+					"name": "Get User By UserId",
 					"protocolProfileBehavior": {
 						"strictSSL": false
 					},
@@ -722,7 +722,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Org Accounts",
+					"name": "Get All Org Accounts",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -790,7 +790,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Store Accounts",
+					"name": "Get All Store Accounts",
 					"request": {
 						"auth": {
 							"type": "bearer",
