@@ -9,6 +9,44 @@
 			"name": "Payments",
 			"item": [
 				{
+					"name": "Bulk Load Payments",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "id,date,from_account,to_account,type,amount,status,created_by,approved_by\n1,2020-11-15T03:43:27.568Z,16984561,555938481,bill,436.4,Complete,alice,bob\n2,2020-11-15T03:43:27.568Z,13948382,555828384,transfer,354.15,Cancelled,alice,\n3,2020-11-15T03:43:27.568Z,23473849,555029838,payroll,52300,Declined,alice,bob\n4,2020-11-15T03:43:27.568Z,26747628,555020393,anyone,12.12,Pending,bob,\n5,2020-11-15T03:43:27.568Z,31770057,555203934,anyone,1158.15,Complete,alice,bob\n6,2020-11-15T03:43:27.568Z,47656935,555939392,payroll,37000,Complete,alice,bob\n7,2020-11-15T03:43:27.568Z,54828165,555939420,anyone,5400,Complete,alice,bob\n8,2020-11-15T03:43:27.568Z,66899266,555987463,anyone,123.12,Complete,alice,bob\n9,2020-11-15T03:43:27.568Z,71886023,555321684,anyone,792.15,Complete,alice,bob\n10,2020-11-15T03:43:27.568Z,80808635,555794613,anyone,1.51,Complete,alice,bob\n11,2020-11-15T03:43:27.568Z,96094495,555281793,anyone,6025.65,Complete,alice,bob",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6877/api/payments/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Payment",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
@@ -553,6 +591,36 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Bulk Load Transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "id,date,account,type,amount\n55,6-Nov-20,16984561,CREDIT,812.89\n43,5-Nov-20,16984561,DEBIT,242.97\n49,5-Nov-20,16984561,DEBIT,220.01\n31,4-Nov-20,16984561,CREDIT,69.88\n37,4-Nov-20,16984561,DEBIT,124.43\n19,3-Nov-20,16984561,DEBIT,426.43\n25,3-Nov-20,16984561,CREDIT,242.72\n7,2-Nov-20,16984561,DEBIT,820.33\n13,2-Nov-20,16984561,DEBIT,528.75\n1,1-Nov-20,16984561,CREDIT,156.79\n56,6-Nov-20,26747628,DEBIT,635.56\n44,5-Nov-20,26747628,DEBIT,645.67\n50,5-Nov-20,26747628,DEBIT,947.35\n32,4-Nov-20,26747628,CREDIT,445.11\n38,4-Nov-20,26747628,DEBIT,686.29\n20,3-Nov-20,26747628,DEBIT,975.68\n26,3-Nov-20,26747628,CREDIT,23.71\n8,2-Nov-20,26747628,DEBIT,689.61\n14,2-Nov-20,26747628,DEBIT,980.33\n2,1-Nov-20,26747628,CREDIT,197.77\n51,6-Nov-20,31770057,DEBIT,785.60\n57,6-Nov-20,31770057,DEBIT,455.23\n45,5-Nov-20,31770057,CREDIT,375.64\n27,4-Nov-20,31770057,CREDIT,849.72\n33,4-Nov-20,31770057,DEBIT,684.75\n39,4-Nov-20,31770057,DEBIT,521.86\n15,3-Nov-20,31770057,CREDIT,707.25\n21,3-Nov-20,31770057,DEBIT,965.54\n9,2-Nov-20,31770057,DEBIT,226.95\n3,1-Nov-20,31770057,DEBIT,500.91\n52,6-Nov-20,47656935,CREDIT,27.00\n58,6-Nov-20,47656935,DEBIT,745.11\n46,5-Nov-20,47656935,DEBIT,487.60\n28,4-Nov-20,47656935,CREDIT,372.08\n34,4-Nov-20,47656935,DEBIT,396.07\n40,4-Nov-20,47656935,DEBIT,291.95\n16,3-Nov-20,47656935,CREDIT,553.57\n22,3-Nov-20,47656935,DEBIT,582.81\n10,2-Nov-20,47656935,DEBIT,259.11\n4,1-Nov-20,47656935,CREDIT,411.70\n53,6-Nov-20,54828165,DEBIT,550.19\n59,6-Nov-20,54828165,DEBIT,993.27\n47,5-Nov-20,54828165,CREDIT,693.14\n29,4-Nov-20,54828165,CREDIT,301.55\n35,4-Nov-20,54828165,CREDIT,0.76\n41,4-Nov-20,54828165,DEBIT,360.60\n17,3-Nov-20,54828165,DEBIT,110.40\n23,3-Nov-20,54828165,DEBIT,613.96\n11,2-Nov-20,54828165,DEBIT,737.07\n5,1-Nov-20,54828165,DEBIT,171.78\n54,6-Nov-20,66899266,CREDIT,677.17\n60,6-Nov-20,66899266,DEBIT,262.12\n48,5-Nov-20,66899266,DEBIT,974.59\n30,4-Nov-20,66899266,DEBIT,164.88\n36,4-Nov-20,66899266,CREDIT,120.38\n42,4-Nov-20,66899266,DEBIT,271.54\n18,3-Nov-20,66899266,DEBIT,642.19\n24,3-Nov-20,66899266,CREDIT,432.55\n12,2-Nov-20,66899266,DEBIT,624.56\n6,1-Nov-20,66899266,DEBIT,655.58",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6877/api/transactions/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"transactions",
+								"bulk"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "Delete All Transactions",

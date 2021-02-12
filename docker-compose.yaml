@@ -20,7 +20,7 @@ services:
       - pingnet-internal
 
   mock-bank-apis:
-    image: tamatping/mock-bank-apis:20210211
+    image: tamatping/mock-bank-apis:20210212
     ports:
       - 6877:6877
     networks:
