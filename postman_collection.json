@@ -645,7 +645,7 @@
 			]
 		},
 		{
-			"name": "Users",
+			"name": "Entitlements",
 			"item": [
 				{
 					"name": "Get All Users",
@@ -682,7 +682,7 @@
 					"response": []
 				},
 				{
-					"name": "Get One User",
+					"name": "Get Single User",
 					"protocolProfileBehavior": {
 						"strictSSL": false
 					},
@@ -700,7 +700,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:1443/scim/v2/Users/193bc98c-75b9-3b19-8db9-9302c5aa435c",
+							"raw": "https://localhost:1443/scim/v2/Users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -710,7 +710,143 @@
 								"scim",
 								"v2",
 								"Users",
-								"193bc98c-75b9-3b19-8db9-9302c5aa435c"
+								"4b4a457a-1a7e-380a-a2fc-1412ae425ba9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Org Accounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/OrgAccounts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"OrgAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Org Accounts By OrgID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/OrgAccounts?filter=org-id eq \"xyz\"",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"OrgAccounts"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "org-id eq \"xyz\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store Accounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/StoreAccounts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"StoreAccounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store Accounts By OrgID and Store Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/StoreAccounts?filter=org-id eq \"xyz\" and store-name eq \"Store 2\"",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"StoreAccounts"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "org-id eq \"xyz\" and store-name eq \"Store 2\""
+								}
 							]
 						}
 					},
