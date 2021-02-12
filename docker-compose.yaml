@@ -8,7 +8,7 @@ services:
       #- SERVER_PROFILE_BRANCH=2001
       - MAKELDIF_USERS=10
       #- VERBOSE=true
-      - MAX_HEAP_SIZE=768m
+      - MAX_HEAP_SIZE=1024m
     env_file:
       - ~/.pingidentity/devops
       - settings.env
