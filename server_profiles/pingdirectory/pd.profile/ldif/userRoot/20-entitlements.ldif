@@ -1,0 +1,185 @@
+
+dn: ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: entitlements
+
+dn: ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: storeaccounts
+
+dn: ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: orgaccounts
+
+
+dn: entitlementAccountName=XYZ Store 1 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 1 Transactions
+entitlementAccounts: 16984561
+entitlementAccountType: Transaction Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 1 Investments,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 1 Investments
+entitlementAccounts: 13948382
+entitlementAccountType: Investment Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 2 Investements,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 2 Investements
+entitlementAccounts: 23473849
+entitlementAccountType: Investment Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 2 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 2 Transactions
+entitlementAccounts: 26747628
+entitlementAccountType: Transaction Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 3 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 3 Transactions
+entitlementAccounts: 31770057
+entitlementAccountType: Transaction Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 4 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 4 Transactions
+entitlementAccounts: 48939393
+entitlementAccountType: Transaction Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 4 Investments,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 4 Investments
+entitlementAccounts: 47656935
+entitlementAccountType: Investment Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 5 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 4 Investments
+entitlementAccounts: 51203045
+entitlementAccountType: Transaction Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Store 5 Currency,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Store 5 Currency
+entitlementAccounts: 54828165
+entitlementAccountType: Currency Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=XYZ Head Office Payroll,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: XYZ Head Office Payroll
+entitlementAccounts: 66899266
+entitlementAccountType: Payroll Account
+entitlementOrgId: xyz
+
+dn: entitlementAccountName=Acme account 1,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: Acme account 1
+entitlementAccounts: 71886023
+entitlementAccountType: Transaction Account
+entitlementOrgId: acme
+
+dn: entitlementAccountName=Acme account 2,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: Acme account 2
+entitlementAccounts: 80808635
+entitlementAccountType: Transaction Account
+entitlementOrgId: acme
+
+dn: entitlementAccountName=Mega transaction account,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgAccounts
+entitlementAccountName: Mega transaction account
+entitlementAccounts: 96094495
+entitlementAccountType: Transaction Account
+entitlementOrgId: acme
+
+
+
+dn: entitlementStoreName=Store 1,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Store 1
+entitlementOrgId: xyz
+entitlementAccounts: 16984561
+
+dn: entitlementStoreName=Store 2,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Store 2
+entitlementOrgId: xyz
+entitlementAccounts: 26747628
+
+dn: entitlementStoreName=Store 3,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Store 3
+entitlementOrgId: xyz
+entitlementAccounts: 31770057
+
+dn: entitlementStoreName=Store 4,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Store 4
+entitlementOrgId: xyz
+entitlementAccounts: 47656935
+
+dn: entitlementStoreName=Store 5,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Store 5
+entitlementOrgId: xyz
+entitlementAccounts: 54828165
+
+dn: entitlementStoreName=Head office,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Head office
+entitlementOrgId: xyz
+entitlementAccounts: 66899266
+
+dn: entitlementStoreName=Acme Retail Store,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Acme Retail Store
+entitlementOrgId: acme
+entitlementAccounts: 71886023
+
+dn: entitlementStoreName=Acme Head Office,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Acme Head Office
+entitlementOrgId: acme
+entitlementAccounts: 80808635
+
+dn: entitlementStoreName=Mega Retail Store,ou=storeaccounts,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementOrgStoreAccounts
+entitlementStoreName: Mega Retail Store
+entitlementOrgId: mega
+entitlementAccounts: 96094495

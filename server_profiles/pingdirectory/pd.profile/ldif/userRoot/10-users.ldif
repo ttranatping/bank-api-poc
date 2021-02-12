@@ -4,6 +4,8 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
+entitlementAccounts: 12387198237
 sn: Brooke
 cn: Alice Brooke
 givenName: Alice
@@ -22,6 +24,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Seawell
 cn: Bob Seawell
 givenName: Bob
@@ -40,6 +43,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Tancordo
 cn: Eve Tancordo
 givenName: Eve
@@ -58,6 +62,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Knio
 cn: Fred Knio
 givenName: Fred
@@ -76,6 +81,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Psutka
 cn: Greg Psutka
 givenName: Greg
@@ -94,6 +100,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Brooke
 cn: Harry Brooke
 givenName: Harry
@@ -112,6 +119,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Seawell
 cn: Ian Seawell
 givenName: Ian
@@ -130,6 +138,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Tancordo
 cn: Jane Tancordo
 givenName: Jane
@@ -148,6 +157,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Knio
 cn: John Knio
 givenName: John
@@ -166,6 +176,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Psutka
 cn: Kevin Psutka
 givenName: Kevin
@@ -184,6 +195,7 @@ objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
 sn: Psutka
 cn: Larry Psutka
 givenName: Larry

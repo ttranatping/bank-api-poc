@@ -7,4 +7,4 @@ attributeTypes: ( entitlementStoreName-OID NAME 'entitlementStoreName' SINGLE-VA
 attributeTypes: ( entitlementAccountName-OID NAME 'entitlementAccountName' SINGLE-VALUE USAGE userApplications )
 objectClasses: ( entitlementOrgStoreAccounts-OID NAME 'entitlementOrgStoreAccounts' STRUCTURAL MUST ( entitlementOrgId $ entitlementStoreName $ entitlementAccountName ) MAY ( entitlementAccounts $ entitlementAccountType ) )
 objectClasses: ( entitlementOrgAccounts-OID NAME 'entitlementOrgAccounts' STRUCTURAL MUST ( entitlementOrgId $ entitlementAccountName ) MAY ( entitlementAccounts $ entitlementAccountType ) )
-objectClasses: ( entitlementUserAccounts-OID NAME 'entitlementUserAccounts' STRUCTURAL MUST ( entitlementUserId ) MAY ( entitlementAccounts $ entitlementAccountType $ entitlementAccountName ) )
+objectClasses: ( entitlementUserAccountsAux-OID NAME 'entitlementUserAccountsAux' AUXILIARY MAY ( entitlementUserId $ entitlementAccounts $ entitlementAccountType $ entitlementAccountName ) )
