@@ -74,7 +74,7 @@ entitlementOrgId: xyz
 dn: entitlementOrgName=XYZ Store 5 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
 objectClass: top
 objectClass: entitlementOrgAccounts
-entitlementOrgName: XYZ Store 4 Investments
+entitlementOrgName: XYZ Store 5 Transactions
 entitlementAccounts: 51203045
 entitlementAccountType: Transaction Account
 entitlementOrgId: xyz

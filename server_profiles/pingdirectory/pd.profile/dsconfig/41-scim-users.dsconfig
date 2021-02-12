@@ -58,28 +58,32 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name user-id \
  --set scim-resource-type-attribute:user-id \
  --set ldap-attribute:uid \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
  --type-name User \
  --mapping-name accounts \
  --set scim-resource-type-attribute:accounts \
  --set ldap-attribute:entitlementAccounts \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
  --type-name User \
  --mapping-name given-name \
  --set scim-resource-type-attribute:given-name \
  --set ldap-attribute:givenName \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
 --type-name User \
 --mapping-name family-name \
 --set scim-resource-type-attribute:family-name \
 --set ldap-attribute:sn \
---set writable:false
+--set writable:false \
+--set searchable:true
 
 dsconfig create-scim-attribute-mapping \
  --type-name User \
@@ -93,11 +97,13 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name org-id \
  --set scim-resource-type-attribute:org-id \
  --set ldap-attribute:o \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
  --type-name User \
  --mapping-name role \
  --set scim-resource-type-attribute:role \
  --set ldap-attribute:employeeType \
- --set writable:false
+ --set writable:false \
+ --set searchable:true

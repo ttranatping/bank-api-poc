@@ -22,8 +22,8 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name name \
  --set scim-resource-type-attribute:name \
  --set ldap-attribute:entitlementOrgName \
- --set writable:false
-
+ --set writable:false \
+ --set searchable:true
 
  dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:org:accounts \
@@ -35,7 +35,8 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name accounts \
  --set scim-resource-type-attribute:accounts \
  --set ldap-attribute:entitlementAccounts \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:org:accounts \
@@ -48,7 +49,8 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name type \
  --set scim-resource-type-attribute:type \
  --set ldap-attribute:entitlementAccountType \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:org:accounts \
@@ -61,4 +63,5 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name org-id \
  --set scim-resource-type-attribute:org-id \
  --set ldap-attribute:entitlementOrgId \
- --set writable:false
+ --set writable:false \
+ --set searchable:true
