@@ -1,0 +1,50 @@
+
+dsconfig create-scim-schema \
+ --schema-name urn:pingidentity:org:store:accounts
+
+dsconfig create-scim-resource-type \
+ --type-name StoreAccounts \
+ --type ldap-mapping \
+ --set enabled:true \
+ --set endpoint:storeaccounts \
+ --set structural-ldap-objectclass:entitlementOrgStoreAccounts \
+ --set include-base-dn:ou=storeaccounts,ou=entitlements,${USER_BASE_DN} \
+ --set core-schema:urn:pingidentity:org:store:accounts
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:org:store:accounts \
+ --attribute-name store-name \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name StoreAccounts \
+ --mapping-name store-name \
+ --set scim-resource-type-attribute:store-name \
+ --set ldap-attribute:entitlementStoreName \
+ --set writable:false
+
+ dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:org:store:accounts \
+ --attribute-name accounts \
+ --set multi-valued:true
+
+ dsconfig create-scim-attribute-mapping \
+ --type-name StoreAccounts \
+ --mapping-name accounts \
+ --set scim-resource-type-attribute:accounts \
+ --set ldap-attribute:entitlementAccounts \
+ --set writable:false
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:org:store:accounts \
+ --attribute-name org-id \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name StoreAccounts \
+ --mapping-name org-id \
+ --set scim-resource-type-attribute:org-id \
+ --set ldap-attribute:entitlementOrgId \
+ --set writable:false

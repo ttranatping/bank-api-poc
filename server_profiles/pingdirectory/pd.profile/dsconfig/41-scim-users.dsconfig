@@ -10,6 +10,7 @@ dsconfig create-scim-resource-type \
  --set enabled:true \
  --set endpoint:users \
  --set structural-ldap-objectclass:inetOrgPerson \
+ --set auxiliary-ldap-objectclass:entitlementUserAccountsAux \
  --set include-base-dn:ou=people,${USER_BASE_DN} \
  --set core-schema:urn:pingidentity:user
 
@@ -18,6 +19,11 @@ dsconfig create-scim-attribute \
  --attribute-name user-id \
  --set required:true \
  --set case-exact:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:user \
+ --attribute-name accounts \
+ --set multi-valued:true
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:user \
@@ -52,6 +58,13 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name user-id \
  --set scim-resource-type-attribute:user-id \
  --set ldap-attribute:uid \
+ --set writable:false
+
+dsconfig create-scim-attribute-mapping \
+ --type-name User \
+ --mapping-name accounts \
+ --set scim-resource-type-attribute:accounts \
+ --set ldap-attribute:entitlementAccounts \
  --set writable:false
 
 dsconfig create-scim-attribute-mapping \
