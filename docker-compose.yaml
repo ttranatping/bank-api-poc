@@ -19,6 +19,13 @@ services:
     networks:
       - pingnet-internal
 
+  mock-bank-apis:
+    image: tamatping/mock-bank-apis:20210211
+    ports:
+      - 6877:6877
+    networks:
+      - pingnet-internal
+
 #  pingdataconsole:
 #    image: pingidentity/pingdataconsole:edge
 #    ports:

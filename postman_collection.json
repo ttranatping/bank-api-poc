@@ -1,0 +1,654 @@
+{
+	"info": {
+		"_postman_id": "50ce7922-b7c6-4259-b19a-95c2c7aa57a8",
+		"name": "NAB Bank API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Create Payment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"date\": \"2020-11-15T03:43:27.568Z\",\n    \"from_account\": \"16984561\",\n    \"to_account\": \"555938481\",\n    \"type\": \"bill\",\n    \"amount\": 436.40,\n    \"status\": \"completed\",\n    \"created_by\": \"alice\",\n    \"approved_by\": \"bob\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6877/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6877/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Payment Detail",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6877/api/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment Status",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"cancelled\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6877/api/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Payment",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6877/api/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete All Payments",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true,
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6877/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Account 1",
+					"item": [
+						{
+							"name": "Create Transaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6-Nov-20\",\n    \"account\": \"16984561\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6/11/2020\",\n    \"account\": \"16984561\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6/11/2020\",\n    \"account\": \"26747628\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions",
+										"55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6/11/2021\",\n    \"account\": \"16984561\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions",
+										"55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Transaction",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions/55",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions",
+										"55"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All Account Transactions",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6877/api/16984561/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"16984561",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account 2",
+					"item": [
+						{
+							"name": "Create Transaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 56,\n    \"date\": \"6-Nov-20\",\n    \"account\": \"26747628\",\n    \"type\": \"DEBIT\",\n    \"amount\": 635.56\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6/11/2020\",\n    \"account\": \"16984561\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Transaction Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 55,\n    \"date\": \"6/11/2020\",\n    \"account\": \"26747628\",\n    \"type\": \"CREDIT\",\n    \"amount\": 812.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions/56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions",
+										"56"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Transaction",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 56,\n    \"date\": \"6/11/2021\",\n    \"account\": \"26747628\",\n    \"type\": \"CREDIT\",\n    \"amount\": 112.89\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions/56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions",
+										"56"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Transaction",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions/56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions",
+										"56"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All Account Transactions",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6877/api/26747628/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6877",
+									"path": [
+										"api",
+										"26747628",
+										"transactions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete All Transactions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6877/api/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6877",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One User",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/Users/193bc98c-75b9-3b19-8db9-9302c5aa435c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"193bc98c-75b9-3b19-8db9-9302c5aa435c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
