@@ -1,0 +1,63 @@
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementAccounts-OID NAME 'entitlementAccounts' USAGE userApplications )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementOrgId-OID NAME 'entitlementOrgId' SINGLE-VALUE USAGE userApplications )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementUserId-OID NAME 'entitlementUserId' SINGLE-VALUE USAGE userApplications )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementAccountType-OID NAME 'entitlementAccountType' SINGLE-VALUE USAGE userApplications )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementStoreName-OID NAME 'entitlementStoreName' SINGLE-VALUE USAGE userApplications )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+attributeTypes: ( entitlementAccountName-OID NAME 'entitlementAccountName' SINGLE-VALUE USAGE userApplications )
+
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+objectClasses: ( entitlementOrgStoreAccounts-OID NAME 'entitlementOrgStoreAccounts' STRUCTURAL MUST ( entitlementOrgId $ entitlementStoreName $ entitlementAccountName ) MAY ( entitlementAccounts $ entitlementAccountType ) )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+objectClasses: ( entitlementOrgAccounts-OID NAME 'entitlementOrgAccounts' STRUCTURAL MUST ( entitlementOrgId $ entitlementAccountName ) MAY ( entitlementAccounts $ entitlementAccountType ) )
+
+dn: cn=schema
+objectClass: top
+objectClass: ldapSubentry
+objectClass: subschema
+cn: schema
+objectClasses: ( entitlementUserAccounts-OID NAME 'entitlementUserAccounts' STRUCTURAL MUST ( entitlementUserId ) MAY ( entitlementAccounts $ entitlementAccountType $ entitlementAccountName ) )

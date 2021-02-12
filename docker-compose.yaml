@@ -26,13 +26,12 @@ services:
     networks:
       - pingnet-internal
 
-#  pingdataconsole:
-#    image: pingidentity/pingdataconsole:edge
-#    ports:
-#      - "9443:8443"
-#    networks:
-#      - pingnet-internal
-#      - pingnet-dmz
+  pingdataconsole:
+    image: pingidentity/pingdataconsole:edge
+    ports:
+      - "9443:8443"
+    networks:
+      - pingnet-internal
 
 networks:
     pingnet-internal:
