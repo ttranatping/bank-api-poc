@@ -700,7 +700,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:1443/scim/v2/Users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9",
+							"raw": "https://localhost:1443/scim/v2/Users?filter=user-id eq \"alice\"",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -709,8 +709,13 @@
 							"path": [
 								"scim",
 								"v2",
-								"Users",
-								"4b4a457a-1a7e-380a-a2fc-1412ae425ba9"
+								"Users"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "user-id eq \"alice\""
+								}
 							]
 						}
 					},
