@@ -100,7 +100,7 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name given-name \
  --set scim-resource-type-attribute:given-name \
  --set ldap-attribute:givenName \
- --set writable:false \
+ --set writable:true \
  --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
@@ -108,7 +108,7 @@ dsconfig create-scim-attribute-mapping \
 --mapping-name family-name \
 --set scim-resource-type-attribute:family-name \
 --set ldap-attribute:sn \
---set writable:false \
+--set writable:true \
 --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
@@ -116,14 +116,15 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name store-name \
  --set scim-resource-type-attribute:store-name \
  --set ldap-attribute:l \
- --set writable:false
+ --set writable:true \
+ --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
  --type-name User \
  --mapping-name org-id \
  --set scim-resource-type-attribute:org-id \
  --set ldap-attribute:o \
- --set writable:false \
+ --set writable:true \
  --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
@@ -131,5 +132,5 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name role \
  --set scim-resource-type-attribute:role \
  --set ldap-attribute:employeeType \
- --set writable:false \
+ --set writable:true \
  --set searchable:true

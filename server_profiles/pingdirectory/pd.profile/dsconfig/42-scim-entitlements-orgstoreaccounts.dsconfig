@@ -22,7 +22,7 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name store-name \
  --set scim-resource-type-attribute:store-name \
  --set ldap-attribute:entitlementStoreName \
- --set writable:false \
+ --set writable:true \
  --set searchable:true
 
  dsconfig create-scim-attribute \
@@ -35,7 +35,7 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name accounts \
  --set scim-resource-type-attribute:accounts \
  --set ldap-attribute:entitlementAccounts \
- --set writable:false \
+ --set writable:true \
  --set searchable:true
 
 dsconfig create-scim-attribute \
@@ -49,5 +49,5 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name org-id \
  --set scim-resource-type-attribute:org-id \
  --set ldap-attribute:entitlementOrgId \
- --set writable:false \
+ --set writable:true \
  --set searchable:true
