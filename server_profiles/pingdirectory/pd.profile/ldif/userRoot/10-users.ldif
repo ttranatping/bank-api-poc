@@ -6,6 +6,7 @@ objectClass: inetOrgPerson
 objectClass: pf-connected-identities
 objectClass: entitlementUserAccountsAux
 entitlementAccounts: 12387198237
+entitlementDepartments: Accounts Payable
 sn: Brooke
 cn: Alice Brooke
 givenName: Alice
@@ -16,6 +17,26 @@ o: xyz
 userPassword: password
 pf-connected-identity: auth-source=pf-local-identity:user-id=alice
 entryuuid: 4b4a457a-1a7e-380a-a2fc-1412ae425ba9
+modifyTimestamp: 20200626044309.209Z
+
+dn: uid=tom,ou=People,${USER_BASE_DN}
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: pf-connected-identities
+objectClass: entitlementUserAccountsAux
+entitlementDepartments: NAB Connect Helpdesk
+sn: Brooke
+cn: Tom Brooke
+givenName: Tom
+uid: tom
+employeeType: NAB Helpdesk
+l: Head Office
+o: xyz
+userPassword: password
+pf-connected-identity: auth-source=pf-local-identity:user-id=tom
+entryuuid: db4a457a-1a7e-380a-a2fc-1412ae425ba9
 modifyTimestamp: 20200626044309.209Z
 
 dn: uid=bob,ou=People,${USER_BASE_DN}

@@ -27,6 +27,16 @@ dsconfig create-scim-attribute \
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:user \
+ --attribute-name accreditations \
+ --set multi-valued:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:user \
+ --attribute-name departments \
+ --set multi-valued:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:user \
  --attribute-name given-name \
  --set required:true
 
@@ -66,7 +76,23 @@ dsconfig create-scim-attribute-mapping \
  --mapping-name accounts \
  --set scim-resource-type-attribute:accounts \
  --set ldap-attribute:entitlementAccounts \
- --set writable:false \
+ --set writable:true \
+ --set searchable:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name User \
+ --mapping-name accreditations \
+ --set scim-resource-type-attribute:accreditations \
+ --set ldap-attribute:entitlementAccreditations \
+ --set writable:true \
+ --set searchable:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name User \
+ --mapping-name departments \
+ --set scim-resource-type-attribute:departments \
+ --set ldap-attribute:entitlementDepartments \
+ --set writable:true \
  --set searchable:true
 
 dsconfig create-scim-attribute-mapping \
