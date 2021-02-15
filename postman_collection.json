@@ -682,7 +682,7 @@
 					"response": []
 				},
 				{
-					"name": "Get User By UserId",
+					"name": "Find User By UserId and Department",
 					"protocolProfileBehavior": {
 						"strictSSL": false
 					},
@@ -700,7 +700,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:1443/scim/v2/Users?filter=user-id eq \"alice\"",
+							"raw": "https://localhost:1443/scim/v2/Users?filter=user-id eq \"alice\" and departments eq \"Accounts Payable\"",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -714,7 +714,7 @@
 							"query": [
 								{
 									"key": "filter",
-									"value": "user-id eq \"alice\""
+									"value": "user-id eq \"alice\" and departments eq \"Accounts Payable\""
 								}
 							]
 						}
@@ -876,7 +876,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Org Accounts By OrgID",
+					"name": "Find Org Accounts By OrgID",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -944,7 +944,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Store Accounts By OrgID and Store Name",
+					"name": "Find Store Accounts By OrgID and Store Name",
 					"request": {
 						"auth": {
 							"type": "bearer",
