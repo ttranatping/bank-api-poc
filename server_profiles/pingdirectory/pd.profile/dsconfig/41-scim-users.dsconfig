@@ -12,7 +12,8 @@ dsconfig create-scim-resource-type \
  --set structural-ldap-objectclass:inetOrgPerson \
  --set auxiliary-ldap-objectclass:entitlementUserAccountsAux \
  --set include-base-dn:ou=people,${USER_BASE_DN} \
- --set core-schema:urn:pingidentity:user
+ --set core-schema:urn:pingidentity:user \
+ --set "include-filter:(objectClass=entitlementUserAccountsAux)"
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:user \
