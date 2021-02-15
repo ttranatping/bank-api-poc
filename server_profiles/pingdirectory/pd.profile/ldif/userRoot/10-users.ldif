@@ -7,6 +7,7 @@ objectClass: pf-connected-identities
 objectClass: entitlementUserAccountsAux
 entitlementAccounts: 12387198237
 entitlementDepartments: Accounts Payable
+entitlementAccreditations: Credit Policy Awareness Training
 sn: Brooke
 cn: Alice Brooke
 givenName: Alice

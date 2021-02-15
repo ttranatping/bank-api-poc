@@ -722,6 +722,129 @@
 					"response": []
 				},
 				{
+					"name": "Load User Alice",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/Users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"4b4a457a-1a7e-380a-a2fc-1412ae425ba9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Alice",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accounts\": [\n        \"12387198237\"\n    ],\n    \"departments\": [\n        \"Accounts Payable\"\n    ],\n    \"accreditations\": [\n        \"Credit Policy Awareness Training\"\n    ],\n    \"family-name\": \"Brooke\",\n    \"given-name\": \"Alice\",\n    \"org-id\": \"xyz\",\n    \"role\": \"Accounting Clerk\",\n    \"store-name\": \"Head Office\",\n    \"user-id\": \"alice\",\n    \"id\": \"4b4a457a-1a7e-380a-a2fc-1412ae425ba9\",\n    \"meta\": {\n        \"resourceType\": \"User\",\n        \"location\": \"https://localhost:1443/scim/v2/users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9\"\n    },\n    \"schemas\": [\n        \"urn:pingidentity:user\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/Users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"4b4a457a-1a7e-380a-a2fc-1412ae425ba9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Alice",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{\"sub\":\"administrator\", \"active\": true }",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Operations\": [\n        {\n            \"op\": \"add\",\n            \"path\": \"accreditations\",\n            \"value\": [\"xxx\", \"aaa\"]\n        }\n    ],\n    \"schemas\": [\n        \"urn:ietf:params:scim:api:messages:2.0:PatchOp\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:1443/scim/v2/Users/4b4a457a-1a7e-380a-a2fc-1412ae425ba9",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "1443",
+							"path": [
+								"scim",
+								"v2",
+								"Users",
+								"4b4a457a-1a7e-380a-a2fc-1412ae425ba9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All Org Accounts",
 					"request": {
 						"auth": {
