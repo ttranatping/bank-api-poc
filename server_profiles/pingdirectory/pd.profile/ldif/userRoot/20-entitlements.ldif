@@ -14,6 +14,11 @@ objectClass: top
 objectClass: organizationalUnit
 ou: orgaccounts
 
+dn: ou=delegation,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: organizationalUnit
+ou: delegation
+
 
 dn: entitlementOrgName=XYZ Store 1 Transactions,ou=orgaccounts,ou=entitlements,${USER_BASE_DN}
 objectClass: top
@@ -183,3 +188,12 @@ objectClass: entitlementOrgStoreAccounts
 entitlementStoreName: Mega Retail Store
 entitlementOrgId: mega
 entitlementAccounts: 96094495
+
+dn: cn=123456-create payment,ou=delegation,ou=entitlements,${USER_BASE_DN}
+objectClass: top
+objectClass: entitlementDelegation
+cn: 123456-create payment
+entitlementDelegate: Tom
+entitlementDelegator: Alice
+entitlementOperation: create payment
+entitlementAccounts: 123456

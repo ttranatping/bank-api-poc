@@ -1,0 +1,81 @@
+
+dsconfig create-scim-schema \
+ --schema-name urn:pingidentity:delegation
+
+dsconfig create-scim-resource-type \
+ --type-name Delegation \
+ --type ldap-mapping \
+ --set enabled:true \
+ --set endpoint:delegation \
+ --set structural-ldap-objectclass:entitlementDelegation \
+ --set include-base-dn:ou=delegation,ou=entitlements,${USER_BASE_DN} \
+ --set core-schema:urn:pingidentity:delegation
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:delegation \
+ --attribute-name operation \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name Delegation \
+ --mapping-name operation \
+ --set scim-resource-type-attribute:operation \
+ --set ldap-attribute:entitlementOperation \
+ --set writable:true \
+ --set searchable:true
+
+ dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:delegation \
+ --attribute-name accounts \
+ --set multi-valued:true
+
+ dsconfig create-scim-attribute-mapping \
+ --type-name Delegation \
+ --mapping-name accounts \
+ --set scim-resource-type-attribute:accounts \
+ --set ldap-attribute:entitlementAccounts \
+ --set writable:true \
+ --set searchable:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:delegation \
+ --attribute-name delegate \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name Delegation \
+ --mapping-name delegate \
+ --set scim-resource-type-attribute:delegate \
+ --set ldap-attribute:entitlementDelegate \
+ --set writable:true \
+ --set searchable:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:delegation \
+ --attribute-name delegator \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name Delegation \
+ --mapping-name delegator \
+ --set scim-resource-type-attribute:delegator \
+ --set ldap-attribute:entitlementDelegator \
+ --set writable:true \
+ --set searchable:true
+
+dsconfig create-scim-attribute \
+ --schema-name urn:pingidentity:delegation \
+ --attribute-name name \
+ --set required:true \
+ --set case-exact:true
+
+dsconfig create-scim-attribute-mapping \
+ --type-name Delegation \
+ --mapping-name name \
+ --set scim-resource-type-attribute:name \
+ --set ldap-attribute:cn \
+ --set writable:false \
+ --set searchable:true
