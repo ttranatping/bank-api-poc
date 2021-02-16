@@ -1222,6 +1222,163 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Delegation",
+					"item": [
+						{
+							"name": "Get All Delegations",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{\"sub\":\"administrator\", \"active\": true }",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:1443/scim/v2/delegation",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "1443",
+									"path": [
+										"scim",
+										"v2",
+										"delegation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find User By Account and Delegator",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{\"sub\":\"administrator\", \"active\": true }",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:1443/scim/v2/delegation?filter=account eq \"123456\" and delegator eq \"alice\"",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "1443",
+									"path": [
+										"scim",
+										"v2",
+										"delegation"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "account eq \"123456\" and delegator eq \"alice\""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Load Delegation",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{\"sub\":\"administrator\", \"active\": true }",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:1443/scim/v2/delegation/930b23d0-6a77-3057-b01d-dc1c951bf1ef",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "1443",
+									"path": [
+										"scim",
+										"v2",
+										"delegation",
+										"930b23d0-6a77-3057-b01d-dc1c951bf1ef"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Delegation",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{\"sub\":\"administrator\", \"active\": true }",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"account\": \"65432122221\",\n    \"delegate\": \"Bob\",\n    \"delegator\": \"Alice\",\n    \"operation\": \"create payment\",\n    \"schemas\": [\n        \"urn:pingidentity:delegation\"\n    ]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:1443/scim/v2/delegation",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "1443",
+									"path": [
+										"scim",
+										"v2",
+										"delegation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
