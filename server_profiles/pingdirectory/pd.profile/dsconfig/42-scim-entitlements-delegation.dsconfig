@@ -9,7 +9,8 @@ dsconfig create-scim-resource-type \
  --set endpoint:delegation \
  --set structural-ldap-objectclass:entitlementDelegation \
  --set include-base-dn:ou=delegation,ou=entitlements,${USER_BASE_DN} \
- --set core-schema:urn:pingidentity:delegation
+ --set core-schema:urn:pingidentity:delegation \
+ --set "create-dn-pattern:cn={entitlementAccount}-{entitlementDelegator}-{entitlementOperation},ou=delegation,ou=entitlements,dc=example,dc=com"
 
 dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:delegation \
@@ -27,14 +28,14 @@ dsconfig create-scim-attribute-mapping \
 
  dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:delegation \
- --attribute-name accounts \
- --set multi-valued:true
+ --attribute-name account \
+ --set multi-valued:false
 
  dsconfig create-scim-attribute-mapping \
  --type-name Delegation \
- --mapping-name accounts \
- --set scim-resource-type-attribute:accounts \
- --set ldap-attribute:entitlementAccounts \
+ --mapping-name account \
+ --set scim-resource-type-attribute:account \
+ --set ldap-attribute:entitlementAccount \
  --set writable:true \
  --set searchable:true
 
@@ -42,7 +43,7 @@ dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:delegation \
  --attribute-name delegate \
  --set required:true \
- --set case-exact:true
+ --set case-exact:false
 
 dsconfig create-scim-attribute-mapping \
  --type-name Delegation \
@@ -56,7 +57,7 @@ dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:delegation \
  --attribute-name delegator \
  --set required:true \
- --set case-exact:true
+ --set case-exact:false
 
 dsconfig create-scim-attribute-mapping \
  --type-name Delegation \
@@ -70,7 +71,7 @@ dsconfig create-scim-attribute \
  --schema-name urn:pingidentity:delegation \
  --attribute-name name \
  --set required:true \
- --set case-exact:true
+ --set case-exact:false
 
 dsconfig create-scim-attribute-mapping \
  --type-name Delegation \

@@ -196,4 +196,4 @@ cn: 123456-create payment
 entitlementDelegate: Tom
 entitlementDelegator: Alice
 entitlementOperation: create payment
-entitlementAccounts: 123456
+entitlementAccount: 123456
